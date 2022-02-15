@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="app.js"></script>
+</head>
+
+<body>
+    <h2>Cars Array</h2>
+    <ul>
+        <script>
+            console.log(cars.length);
+            for (let i = 0; i < cars.length; i++) {
+                document.writeln(`<li>${cars[i]}</li>`);
+            }
+        </script>
+    </ul>
+
+    <h2>Makes Array</h2>
+    <ul>
+        <script>
+            for (const m of makes) {
+                document.writeln(`<li>${m}</li>`);
+            }
+        </script>
+    </ul>
+
+    <select name="" id="">
+        <script>
+            for (const m of makes) {
+                document.writeln(`<option>${m}</option>`);
+            }
+        </script>
+    </select>
+    <h1>My Numbers</h1>
+    <script>
+
+        function printArray(arr) {
+            document.writeln('<ul>');
+
+            for (const n of arr) {
+                document.writeln(`<li>${n}</li>`);
+            }
+
+            document.writeln('</ul>');
+        }
+
+
+        if (numbers.length > 0) {
+            printArray(numbers);
+
+            document.writeln('<h3>Sort my numbers (alphanumeric)</h3>');
+
+            numbers.sort();
+
+            printArray(numbers);
+
+            document.writeln('<h3>Sort my numbers numerically</h3>');
+
+            numbers.sort((x, y) => { return x - y });
+
+            printArray(numbers);
+
+            document.writeln('<h3>Sort my numbers numerically desc</h3>');
+
+            numbers.sort((x, y) => { return y - x });
+
+            printArray(numbers);
+
+
+        } else {
+            document.writeln('<h3>No numbers in our array</h3>')
+        }
+    </script>
+    <script>
+        let things = [1,2,100,true, new Date(), 'Chris', 'WMAD',2022];
+
+        printArray(things);
+    </script>
+</body>
+
+</html>
